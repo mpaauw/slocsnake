@@ -12,7 +12,8 @@ from os.path import isfile, join
 class Tracker:
      
     #global tracking variables go here...
-
+    #blockComment = {'front': '', 'back': ''}
+    
 
     def run(self): 
         files = [f for f in os.listdir('.') if os.path.isfile(f)]

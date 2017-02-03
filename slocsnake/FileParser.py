@@ -5,6 +5,8 @@ class FileParser:
             lines = (line.rstrip('\n') for line in configReader)
             rawData = list(lines)
         
+
+        
         #test:
         iter = 1
         print("*****START OF FILE: [", file, "]*****")
