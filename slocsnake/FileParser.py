@@ -9,6 +9,11 @@ class FileParser:
             lines = (line.rstrip('\n') for line in configReader)
             rawData = list(lines)      
         slocData.loose = FileParser.countLoose(rawData)
+
+        #test:
+        print("***Counting File:\t[", file, "]***")
+        print("***SLOC:\t\t[", slocData.loose, "]")
+
         return slocData
 
     @staticmethod
@@ -17,4 +22,3 @@ class FileParser:
         for line in rawData:
             count += 1
         return count
-        

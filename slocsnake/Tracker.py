@@ -1,10 +1,6 @@
-#import InitParser
 from InitParser import InitParser
-#import ParsedObject
 from ParsedObject import ParsedObject
-#import FileParser
 from FileParser import FileParser
-#import SlocObject
 from SlocObject import SlocObject
 import os
 from os import listdir
@@ -40,6 +36,6 @@ class Tracker:
     @staticmethod
     def logAggregates():
         print("*******SLOC TOTALS*******")
-        print("loose:[", Tracker._slocTotals.loose, "]")
-        print("physical:[", Tracker._slocTotals.physical, "]")
-        print("logical:[", Tracker._slocTotals.logical, "]")
+        print("loose:\t\t[", Tracker._slocTotals.loose, "]")
+        print("physical:\t[", Tracker._slocTotals.physical, "]")
+        print("logical:\t[", Tracker._slocTotals.logical, "]")
