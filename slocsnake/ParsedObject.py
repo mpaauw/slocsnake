@@ -1,4 +1,5 @@
 class ParsedObject:
+    
     name = ''
     extension = ''
     singleComment = ''
@@ -14,7 +15,3 @@ class ParsedObject:
     def setBlockComment(front, back):
         ParsedObject.blockComment['front'] = front
         ParsedObject.blockComment['back'] = back
-
-
-
-    

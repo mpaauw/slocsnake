@@ -1,11 +1,10 @@
-#from FileParser import FileParser
-import InitParser
+#import InitParser
 from InitParser import InitParser
-import ParsedObject
+#import ParsedObject
 from ParsedObject import ParsedObject
-import FileParser
+#import FileParser
 from FileParser import FileParser
-import SlocObject
+#import SlocObject
 from SlocObject import SlocObject
 import os
 from os import listdir
@@ -13,9 +12,6 @@ from os.path import isfile, join
 
 class Tracker:
      
-    #global tracking variables go here...
-    #blockComment = {'front': '', 'back': ''}  
-
     _slocTotals = SlocObject()
 
     def run(self): 
@@ -30,11 +26,9 @@ class Tracker:
         filename, fileExt = os.path.splitext(input)
         init = InitParser()
         parsedObject = init.initialize(fileExt)
-
         parser = FileParser()
         newSloc = SlocObject()
         newSloc = parser.parse(parsedObject, input)
-
         Tracker.computeAggregates(newSloc)
 
     @staticmethod
@@ -45,11 +39,7 @@ class Tracker:
 
     @staticmethod
     def logAggregates():
-        # console / log file functionality regarding sloc aggregates goes here
         print("*******SLOC TOTALS*******")
         print("loose:[", Tracker._slocTotals.loose, "]")
         print("physical:[", Tracker._slocTotals.physical, "]")
         print("logical:[", Tracker._slocTotals.logical, "]")
-
-
-
