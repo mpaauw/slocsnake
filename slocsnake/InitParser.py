@@ -2,10 +2,20 @@ from ParsedObject import ParsedObject
 
 class InitParser:
 
-        _configDir = './configs/'
+    _configPath = "../configs/config"
 
-        def initialize(extension):
-        configFile = open(_configDir + extension, r)
+    def initialize(self, extension):
         
-        #test driver:
-        print configFile
+        with open(self._configPath + extension) as configReader:
+            lines = (line.rstrip('\n') for line in configReader)
+            parsed = list(lines)
+
+        newParsedObject = ParsedObject(parsed[0], parsed[1], parsed[2], parsed[3], parsed[4])
+
+        return newParsedObject
+       
+
+        
+
+        
+        
