@@ -29,7 +29,7 @@ class FileParser:
         return count
 
     @staticmethod
-    def countPhysical(rawData): #includes everything but whitespace and single-line braces, parens, etc
+    def countPhysical(rawData): #includes everything but whitespace, brackets, braces, parens
         count = 0
         for line in rawData:
             if len(line) == 1:
@@ -41,3 +41,6 @@ class FileParser:
                 continue
             count += 1
         return count
+
+    @staticmethod
+    def countLogical(rawData): #includes everything but comments, brackets, braces, parens, whitespace
