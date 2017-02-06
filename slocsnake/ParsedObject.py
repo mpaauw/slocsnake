@@ -3,7 +3,8 @@ class ParsedObject:
     name = ''
     extension = ''
     singleComment = ''
-    blockComment = {'front': '', 'back': ''}
+    blockFront = ''
+    blockBack = ''
 
     def __init__(self, nameInput, extensionInput, singleCommentInput, blockCommentFrontInput, blockCommentBackInput):
         ParsedObject.name = nameInput
@@ -13,5 +14,5 @@ class ParsedObject:
 
     @staticmethod
     def setBlockComment(front, back):
-        ParsedObject.blockComment['front'] = front
-        ParsedObject.blockComment['back'] = back
+        ParsedObject.blockFront = front
+        ParsedObject.blockBack = back
